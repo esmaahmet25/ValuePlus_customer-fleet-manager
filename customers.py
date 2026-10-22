@@ -20,6 +20,7 @@ def customer_menu():
             view_customers()
         elif user_choice == "3":
             print("\nSearch for a Customer selected.")
+            search_customer()
         elif user_choice == "4":
             return
         else:
@@ -28,7 +29,7 @@ def customer_menu():
 
 def add_customer():
     customer_number = len(customers) + 1
-    customer_id = f"C{customer_number:03d}"
+    customer_id = (f"C{customer_number:03d}")
     company_name = input("Enter company name: ").strip().title()
     contact_name = input("Enter contact person's name : ").strip().title()
     phone_number = input("Enter phone number : ")
@@ -76,3 +77,22 @@ def view_customers():
             -----------------------------------
     """)
     
+
+def search_customer():
+    if not customers:
+        print("No customers are registered!")
+        return
+    customer_id = input("Enter the customer ID: ").strip().upper()
+    for customer in customers:
+        if customer_id == customer["customer_id"]:
+            print("""
+                ========== Customer List ==========
+            """)
+            print(f"""
+                Customer ID: {customer["customer_id"]}
+                Company Name: {customer["company_name"]}
+                City: {customer["city"]}
+                -----------------------------------
+        """)
+            return
+    print("Customer not found!")
