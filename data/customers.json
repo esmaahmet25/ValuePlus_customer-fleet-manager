@@ -1,0 +1,42 @@
+[
+    {
+        "customer_id": "C005",
+        "company_name": "microsoft",
+        "contact_name": "john smith",
+        "phone_number": "01055698707",
+        "email_address": "john_smith@gmail.com",
+        "city": "new york"
+    },
+    {
+        "customer_id": "C002",
+        "company_name": "Desert Star Trading",
+        "contact_name": "Hala",
+        "phone_number": "0509876543",
+        "email_address": "hala@gmail.com",
+        "city": "Jeddah"
+    },
+    {
+        "customer_id": "C006",
+        "company_name": "Teddy",
+        "contact_name": "Phill",
+        "phone_number": "0198765342",
+        "email_address": "phillip@gmail.com",
+        "city": "California"
+    },
+    {
+        "customer_id": "C007",
+        "company_name": "Not Sure",
+        "contact_name": "Elen",
+        "phone_number": "86432767099",
+        "email_address": "sfhfjhj@gmail.com",
+        "city": "Toronto"
+    },
+    {
+        "customer_id": "C008",
+        "company_name": "Fadia",
+        "contact_name": "Fadia",
+        "phone_number": "123456789",
+        "email_address": "fadia_boutique@gmail.com",
+        "city": "Ndjamena"
+    }
+]

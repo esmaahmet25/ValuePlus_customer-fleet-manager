@@ -1,4 +1,6 @@
-customers = []
+from storage import load_customers, save_customers
+customers = load_customers()
+
 
 def customer_menu():
     while True:
@@ -28,8 +30,16 @@ def customer_menu():
 
 
 def add_customer():
-    customer_number = len(customers) + 1
-    customer_id = (f"C{customer_number:03d}")
+    customer_numbers = []
+    for customer in customers:
+        customer_number = int(customer["customer_id"][1:])
+        customer_numbers.append(customer_number)
+    if not customer_numbers:
+        customer_id = "C001"
+    else:
+        maxi = max(customer_numbers) + 1
+        customer_id = (f"C{maxi:03d}")
+    
     company_name = input("Enter company name: ").strip().title()
     contact_name = input("Enter contact person's name : ").strip().title()
     phone_number = input("Enter phone number : ")
@@ -46,6 +56,7 @@ def add_customer():
     }
 
     customers.append(customer_info)
+    save_customers(customers)
 
     print(f"""
         ========== Customer Details ==========
@@ -96,3 +107,4 @@ def search_customer():
         """)
             return
     print("Customer not found!")
+
