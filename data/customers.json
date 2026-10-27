@@ -38,5 +38,29 @@
         "phone_number": "123456789",
         "email_address": "fadia_boutique@gmail.com",
         "city": "Ndjamena"
+    },
+    {
+        "customer_id": "C009",
+        "company_name": "Microsoft",
+        "contact_name": "Mi",
+        "phone_number": "9086542356578",
+        "email_address": "dhjmlj@yahoo.com",
+        "city": "Tr"
+    },
+    {
+        "customer_id": "C010",
+        "company_name": "Microsoft",
+        "contact_name": "John Smith",
+        "phone_number": "12389754",
+        "email_address": "john@example.com",
+        "city": "Indonisia"
+    },
+    {
+        "customer_id": "C011",
+        "company_name": "Gcl",
+        "contact_name": "Hala",
+        "phone_number": "123 456679",
+        "email_address": "john@example.com",
+        "city": "Gana"
     }
 ]

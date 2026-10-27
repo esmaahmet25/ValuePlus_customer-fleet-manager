@@ -39,11 +39,35 @@ def add_customer():
     else:
         maxi = max(customer_numbers) + 1
         customer_id = (f"C{maxi:03d}")
+
+    company_name = input("Enter company name: ").strip()
+    while not company_name:
+        print("Company name shouldn't be empty!")
+        company_name = input("Enter company name: ").strip()
+    company_name = company_name.title()
+
+    contact_name = input("Enter contact person's name : ").strip()
+    while not contact_name:
+        print("Please enter a contact name!")
+        contact_name = input("Enter cintact person's name: ").strip()
+    contact_name = contact_name.title()
+
+    phone_number = input("Enter phone number : ").strip()
+    while not phone_number:
+        print("Phone number should not be empty!")
+        phone_number = input("Enter phone number : ").strip()
+
+    email_address = input("Enter email address : ").strip()    
+    while True:
+        if not email_address:
+            print("Enter a valid email address!")
+            email_address = input("Enter email address : ").strip()
+        elif ("@" not in email_address) or ("." not in email_address):
+            print("Enter a valid email address!")
+            email_address = input("Enter email address : ").strip()
+        else:
+            break
     
-    company_name = input("Enter company name: ").strip().title()
-    contact_name = input("Enter contact person's name : ").strip().title()
-    phone_number = input("Enter phone number : ")
-    email_address = input("Enter email address : ").strip()
     city = input("Enter city : ").strip().title()
 
     customer_info = {
