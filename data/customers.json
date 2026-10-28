@@ -62,5 +62,13 @@
         "phone_number": "123 456679",
         "email_address": "john@example.com",
         "city": "Gana"
+    },
+    {
+        "customer_id": "C012",
+        "company_name": "None",
+        "contact_name": "No",
+        "phone_number": "7652345609-",
+        "email_address": "none@example.com",
+        "city": "Wibxghj"
     }
 ]

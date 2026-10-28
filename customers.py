@@ -57,6 +57,7 @@ def add_customer():
         print("Phone number should not be empty!")
         phone_number = input("Enter phone number : ").strip()
 
+
     email_address = input("Enter email address : ").strip()    
     while True:
         if not email_address:
@@ -67,6 +68,16 @@ def add_customer():
             email_address = input("Enter email address : ").strip()
         else:
             break
+
+    email_exists = False
+    for customer in customers:
+        if customer["email_address"].lower() == email_address.lower():
+            email_exists = True
+            break
+    if email_exists:
+        print("A customer with this email already exists!")
+        return
+ 
     
     city = input("Enter city : ").strip().title()
 
@@ -108,7 +119,8 @@ def view_customers():
         print(f"""
             Customer ID: {customer["customer_id"]}
             Company Name: {customer["company_name"]}
-            City: {customer["city"]}
+            City: {customer["city"]},
+            Email: {customer["email_address"]}
             -----------------------------------
     """)
     
