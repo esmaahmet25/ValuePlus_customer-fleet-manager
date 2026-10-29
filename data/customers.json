@@ -1,114 +1,130 @@
 [
     {
         "customer_id": "C001",
-        "company_name": "microsoft",
-        "contact_name": "john smith",
-        "phone_number": "01055698707",
-        "email_address": "john_smith@gmail.com",
-        "city": "new york"
+        "company_name": "Microsoft",
+        "contact_name": "John Smith",
+        "phone_number": "+966501234567",
+        "email_address": "john.smith@example.com",
+        "city": "Riyadh"
     },
     {
         "customer_id": "C002",
         "company_name": "Desert Star Trading",
-        "contact_name": "Hala",
-        "phone_number": "0509876543",
-        "email_address": "hala@gmail.com",
+        "contact_name": "Hala Ahmed",
+        "phone_number": "+966509876543",
+        "email_address": "hala.ahmed@example.com",
         "city": "Jeddah"
     },
     {
         "customer_id": "C003",
-        "company_name": "Teddy",
-        "contact_name": "Phill",
-        "phone_number": "0198765342",
-        "email_address": "phillip@gmail.com",
-        "city": "California"
+        "company_name": "Teddy Supplies",
+        "contact_name": "Phillip Brown",
+        "phone_number": "+966512345678",
+        "email_address": "phillip.brown@example.com",
+        "city": "Dammam"
     },
     {
         "customer_id": "C004",
-        "company_name": "Not Sure",
-        "contact_name": "Elen",
-        "phone_number": "86432767099",
-        "email_address": "sfhfjhj@gmail.com",
-        "city": "Toronto"
+        "company_name": "North Star Solutions",
+        "contact_name": "Elen Davis",
+        "phone_number": "+966523456789",
+        "email_address": "elen.davis@example.com",
+        "city": "Khobar"
     },
     {
         "customer_id": "C005",
-        "company_name": "Fadia",
-        "contact_name": "Fadia",
-        "phone_number": "123456789",
-        "email_address": "fadia_boutique@gmail.com",
-        "city": "Ndjamena"
+        "company_name": "Fadia Boutique",
+        "contact_name": "Fadia Hassan",
+        "phone_number": "+966534567890",
+        "email_address": "fadia.hassan@example.com",
+        "city": "Madinah"
     },
     {
         "customer_id": "C006",
-        "company_name": "Microsoft",
-        "contact_name": "Mi",
-        "phone_number": "9086542356578",
-        "email_address": "dhjmlj@yahoo.com",
-        "city": "Tr"
+        "company_name": "Modern Tech Solutions",
+        "contact_name": "Mia Wilson",
+        "phone_number": "+966545678901",
+        "email_address": "mia.wilson@example.com",
+        "city": "Mecca"
     },
     {
         "customer_id": "C007",
-        "company_name": "Microsoft",
-        "contact_name": "John Smith",
-        "phone_number": "12389754",
-        "email_address": "john@example.com",
-        "city": "Indonisia"
+        "company_name": "Global Trade Company",
+        "contact_name": "James Smith",
+        "phone_number": "+966556789012",
+        "email_address": "james.smith@example.com",
+        "city": "Abha"
     },
     {
         "customer_id": "C008",
-        "company_name": "Gcl",
-        "contact_name": "Hala",
-        "phone_number": "123 456679",
-        "email_address": "john@example.com",
-        "city": "Gana"
+        "company_name": "Gulf Commercial Logistics",
+        "contact_name": "Hala Ibrahim",
+        "phone_number": "+966567890123",
+        "email_address": "hala.ibrahim@example.com",
+        "city": "Tabuk"
     },
     {
         "customer_id": "C009",
-        "company_name": "None",
-        "contact_name": "No",
-        "phone_number": "7652345609-",
-        "email_address": "none@example.com",
-        "city": "Wibxghj"
+        "company_name": "Oasis General Trading",
+        "contact_name": "Noah Miller",
+        "phone_number": "+966578901234",
+        "email_address": "noah.miller@example.com",
+        "city": "Taif"
     },
     {
         "customer_id": "C010",
-        "company_name": "Tomer",
-        "contact_name": "Urdoghan",
-        "phone_number": "01055698707",
-        "email_address": "tomer@gmail.com",
-        "city": "Karabuk"
+        "company_name": "Tomer Industries",
+        "contact_name": "Omar Farouk",
+        "phone_number": "+966589012345",
+        "email_address": "omar.farouk@example.com",
+        "city": "Yanbu"
     },
     {
         "customer_id": "C011",
-        "company_name": "None",
-        "contact_name": "Na",
-        "phone_number": "+966501234567",
-        "email_address": "none@gmail.com",
-        "city": "Unknown"
+        "company_name": "Al Noor Enterprises",
+        "contact_name": "Nadia Ali",
+        "phone_number": "+966590123456",
+        "email_address": "nadia.ali@example.com",
+        "city": "Jubail"
     },
     {
         "customer_id": "C012",
-        "company_name": "Gcl",
-        "contact_name": "Hamid",
-        "phone_number": "+966509876549",
-        "email_address": "gcl@gmail.com",
-        "city": "Saudi Arabia"
+        "company_name": "Gulf Coast Logistics",
+        "contact_name": "Hamid Saleh",
+        "phone_number": "+966501987654",
+        "email_address": "hamid.saleh@example.com",
+        "city": "Riyadh"
     },
     {
         "customer_id": "C013",
         "company_name": "Desert Horizon Trading",
         "contact_name": "Ahmed Hassan",
-        "phone_number": "+966501234567",
+        "phone_number": "+966502345678",
         "email_address": "ahmed.hassan@example.com",
-        "city": "Congo"
+        "city": "Jeddah"
     },
     {
         "customer_id": "C014",
-        "company_name": "Desert Horizon Trading",
-        "contact_name": "Ahmed Hassan",
-        "phone_number": "+966501234567",
-        "email_address": "s.ahmed.hassan@example.com",
+        "company_name": "Desert Horizon Services",
+        "contact_name": "Sara Ahmed",
+        "phone_number": "+966503456789",
+        "email_address": "sara.ahmed@example.com",
+        "city": "Dammam"
+    },
+    {
+        "customer_id": "C015",
+        "company_name": "Oasis Mobility",
+        "contact_name": "Omar Khaled",
+        "phone_number": "+966504567890",
+        "email_address": "omar.khaled@example.com",
+        "city": "Riyadh"
+    },
+    {
+        "customer_id": "C016",
+        "company_name": "Riyadh Star Rentals",
+        "contact_name": "Khalid Mansour",
+        "phone_number": "+966551234567",
+        "email_address": "khalid.mansour@example.com",
         "city": "Riyadh"
     }
 ]
