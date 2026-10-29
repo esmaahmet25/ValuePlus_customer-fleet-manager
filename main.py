@@ -32,13 +32,36 @@ def handle_user_choice(user_choice):
             return False
 
 
-def main():
+def main(): 
     while True:
         display_menu()
         user_choice = input("Enter your choice (1-4): ")
         result = handle_user_choice(user_choice)
         if result:
             break
-
 if __name__== "__main__":
     main()
+
+
+"""
+    phone_number = input("Enter the phone number: ")
+    if phone_number.startswith("+966"):
+        print("International format with +")
+    elif phone_number.startswith("966"):
+        print("International format without +")
+    elif phone_number.startswith("05"):
+        print("Local format")
+    else:
+        print("Unknown format")
+
+
+    phone_number1 = "+966501234567"
+    print(phone_number1.startswith("+966"))
+
+    phone_number2 = "0501234567"
+    print(phone_number2.startswith("+966"))
+
+    phone_number3 = "+201012345678"
+    print(phone_number3.startswith("+966"))
+"""  
+  

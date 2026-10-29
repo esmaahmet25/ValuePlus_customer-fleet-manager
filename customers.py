@@ -49,14 +49,26 @@ def add_customer():
     contact_name = input("Enter contact person's name : ").strip()
     while not contact_name:
         print("Please enter a contact name!")
-        contact_name = input("Enter cintact person's name: ").strip()
+        contact_name = input("Enter contact person's name: ").strip()
     contact_name = contact_name.title()
 
-    phone_number = input("Enter phone number : ").strip()
-    while not phone_number:
-        print("Phone number should not be empty!")
-        phone_number = input("Enter phone number : ").strip()
+    while True:
+        phone_number = input("Enter the phone number: ").strip().replace(" ", "")
+        is_supported_format = False
+        if phone_number.startswith("+966"):
+            is_supported_format = True     
+        elif phone_number.startswith("966"):
+            phone_number = f"+{phone_number}"
+            is_supported_format = True
+        elif phone_number.startswith("05"):
+            phone_number = f"+966{phone_number.removeprefix("0")}"
+            is_supported_format = True
 
+        if is_supported_format and (len(phone_number[4:]) == 9) and (phone_number[4:].isdigit() and phone_number[4:].startswith("5")):
+            break
+        else:
+            print("Unknown/Invalid format!")
+            
 
     email_address = input("Enter email address : ").strip()    
     while True:

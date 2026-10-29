@@ -70,5 +70,21 @@
         "phone_number": "7652345609-",
         "email_address": "none@example.com",
         "city": "Wibxghj"
+    },
+    {
+        "customer_id": "C013",
+        "company_name": "Tomer",
+        "contact_name": "Urdoghan",
+        "phone_number": "01055698707",
+        "email_address": "tomer@gmail.com",
+        "city": "Karabuk"
+    },
+    {
+        "customer_id": "C014",
+        "company_name": "None",
+        "contact_name": "Na",
+        "phone_number": "+966501234567",
+        "email_address": "none@gmail.com",
+        "city": "Unknown"
     }
 ]
