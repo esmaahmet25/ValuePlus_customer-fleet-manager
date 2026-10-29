@@ -90,8 +90,15 @@ def add_customer():
         print("A customer with this email already exists!")
         return
  
-    
-    city = input("Enter city : ").strip().title()
+ Did it and test it :
+   
+    city = input("Enter city : ").strip()
+    while not city:
+        print("Please enter City name!")
+        city = input("Enter city: ").strip()
+    city = city.title()
+
+
 
     customer_info = {
         "customer_id": customer_id,
@@ -131,7 +138,7 @@ def view_customers():
         print(f"""
             Customer ID: {customer["customer_id"]}
             Company Name: {customer["company_name"]}
-            City: {customer["city"]},
+            City: {customer["city"]}
             Email: {customer["email_address"]}
             -----------------------------------
     """)

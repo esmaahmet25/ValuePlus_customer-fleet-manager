@@ -86,5 +86,13 @@
         "phone_number": "+966501234567",
         "email_address": "none@gmail.com",
         "city": "Unknown"
+    },
+    {
+        "customer_id": "C015",
+        "company_name": "Gcl",
+        "contact_name": "Hamid",
+        "phone_number": "+966509876549",
+        "email_address": "gcl@gmail.com",
+        "city": "Saudi Arabia"
     }
 ]
