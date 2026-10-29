@@ -15,3 +15,5 @@ env/
 
 # Windows
 Thumbs.db
+
+data/customers_backup.json

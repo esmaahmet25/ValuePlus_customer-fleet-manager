@@ -89,15 +89,12 @@ def add_customer():
     if email_exists:
         print("A customer with this email already exists!")
         return
- 
- Did it and test it :
    
     city = input("Enter city : ").strip()
     while not city:
         print("Please enter City name!")
         city = input("Enter city: ").strip()
     city = city.title()
-
 
 
     customer_info = {
@@ -139,7 +136,6 @@ def view_customers():
             Customer ID: {customer["customer_id"]}
             Company Name: {customer["company_name"]}
             City: {customer["city"]}
-            Email: {customer["email_address"]}
             -----------------------------------
     """)
     
@@ -163,3 +159,194 @@ def search_customer():
             return
     print("Customer not found!")
 
+
+"""
+I accidently enter an email address in the city part:
+
+<l/python/3.14.2/bin/python /workspaces/ValuePlus_customer-fleet-manager/main.py
+
+    ========================================
+       ValuePlus Customer & Fleet Manager
+    ========================================
+
+    1. Customer Management
+    2. Fleet Management
+    3. Quotations
+    4. Exit
+
+Enter your choice (1-4): 1
+
+You selected Customer Management.
+
+
+            ValuePlus — Customer Management
+
+            1. Add a Customer
+            2. View All Customers
+            3. Search for a Customer
+            4. Return to Main Menu
+        
+Enter your choice: 1
+
+Add a Customer selected.
+Enter company name: 
+Company name shouldn't be empty!
+Enter company name:  
+Company name shouldn't be empty!
+Enter company name: Desert Horizon Trading
+Enter contact person's name :  
+Please enter a contact name!
+Enter contact person's name: Ahmed Hassan
+Enter the phone number: 050123456
+Unknown/Invalid format!
+Enter the phone number:          
+Unknown/Invalid format!
+Enter the phone number:   
+Unknown/Invalid format!
+Enter the phone number: +201053478921
+Unknown/Invalid format!
+Enter the phone number: +966401234567
+Unknown/Invalid format!
+Enter the phone number: +96650abc4567
+Unknown/Invalid format!
+Enter the phone number: 0501234567
+Enter email address :  
+Enter a valid email address!
+Enter email address : 
+Enter a valid email address!
+Enter email address : ahmedexample.com
+Enter a valid email address!
+Enter email address : ahmed@
+Enter a valid email address!
+Enter email address : ahmed.hassan@example.com
+Enter city : john@example.com
+
+        ========== Customer Details ==========
+        Customer ID: C016
+        Company Name: Desert Horizon Trading
+        Contact Name: Ahmed Hassan
+        Phone Number: +966501234567
+        Email address: ahmed.hassan@example.com
+        City: John@Example.Com
+        ======================================
+    
+
+Total customers: 13
+
+            ValuePlus — Customer Management
+
+            1. Add a Customer
+            2. View All Customers
+            3. Search for a Customer
+            4. Return to Main Menu
+        
+Enter your choice: 2
+
+View All Customers selected.
+
+           ========== Customer List ==========
+    
+
+            Customer ID: C005
+            Company Name: microsoft
+            City: new york
+            -----------------------------------
+    
+
+            Customer ID: C002
+            Company Name: Desert Star Trading
+            City: Jeddah
+            -----------------------------------
+    
+
+            Customer ID: C006
+            Company Name: Teddy
+            City: California
+            -----------------------------------
+    
+
+            Customer ID: C007
+            Company Name: Not Sure
+            City: Toronto
+            -----------------------------------
+    
+
+            Customer ID: C008
+            Company Name: Fadia
+            City: Ndjamena
+            -----------------------------------
+    
+
+            Customer ID: C009
+            Company Name: Microsoft
+            City: Tr
+            -----------------------------------
+    
+
+            Customer ID: C010
+            Company Name: Microsoft
+            City: Indonisia
+            -----------------------------------
+    
+
+            Customer ID: C011
+            Company Name: Gcl
+            City: Gana
+            -----------------------------------
+    
+
+            Customer ID: C012
+            Company Name: None
+            City: Wibxghj
+            -----------------------------------
+    
+
+            Customer ID: C013
+            Company Name: Tomer
+            City: Karabuk
+            -----------------------------------
+    
+
+            Customer ID: C014
+            Company Name: None
+            City: Unknown
+            -----------------------------------
+    
+
+            Customer ID: C015
+            Company Name: Gcl
+            City: Saudi Arabia
+            -----------------------------------
+    
+
+            Customer ID: C016
+            Company Name: Desert Horizon Trading
+            City: John@Example.Com
+            -----------------------------------
+    
+
+            ValuePlus — Customer Management
+
+            1. Add a Customer
+            2. View All Customers
+            3. Search for a Customer
+            4. Return to Main Menu
+        
+Enter your choice: 4       
+
+    ========================================
+       ValuePlus Customer & Fleet Manager
+    ========================================
+
+    1. Customer Management
+    2. Fleet Management
+    3. Quotations
+    4. Exit
+
+Enter your choice (1-4): 4
+
+Thank you for using ValuePlus Customer & Fleet Manager!
+Goodbye!
+@esmaahmet25 ➜ /workspaces/ValuePlus_customer-fleet-manager (main) $ 
+
+"""

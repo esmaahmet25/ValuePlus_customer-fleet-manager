@@ -1,6 +1,6 @@
 [
     {
-        "customer_id": "C005",
+        "customer_id": "C001",
         "company_name": "microsoft",
         "contact_name": "john smith",
         "phone_number": "01055698707",
@@ -16,7 +16,7 @@
         "city": "Jeddah"
     },
     {
-        "customer_id": "C006",
+        "customer_id": "C003",
         "company_name": "Teddy",
         "contact_name": "Phill",
         "phone_number": "0198765342",
@@ -24,7 +24,7 @@
         "city": "California"
     },
     {
-        "customer_id": "C007",
+        "customer_id": "C004",
         "company_name": "Not Sure",
         "contact_name": "Elen",
         "phone_number": "86432767099",
@@ -32,7 +32,7 @@
         "city": "Toronto"
     },
     {
-        "customer_id": "C008",
+        "customer_id": "C005",
         "company_name": "Fadia",
         "contact_name": "Fadia",
         "phone_number": "123456789",
@@ -40,7 +40,7 @@
         "city": "Ndjamena"
     },
     {
-        "customer_id": "C009",
+        "customer_id": "C006",
         "company_name": "Microsoft",
         "contact_name": "Mi",
         "phone_number": "9086542356578",
@@ -48,7 +48,7 @@
         "city": "Tr"
     },
     {
-        "customer_id": "C010",
+        "customer_id": "C007",
         "company_name": "Microsoft",
         "contact_name": "John Smith",
         "phone_number": "12389754",
@@ -56,7 +56,7 @@
         "city": "Indonisia"
     },
     {
-        "customer_id": "C011",
+        "customer_id": "C008",
         "company_name": "Gcl",
         "contact_name": "Hala",
         "phone_number": "123 456679",
@@ -64,7 +64,7 @@
         "city": "Gana"
     },
     {
-        "customer_id": "C012",
+        "customer_id": "C009",
         "company_name": "None",
         "contact_name": "No",
         "phone_number": "7652345609-",
@@ -72,7 +72,7 @@
         "city": "Wibxghj"
     },
     {
-        "customer_id": "C013",
+        "customer_id": "C010",
         "company_name": "Tomer",
         "contact_name": "Urdoghan",
         "phone_number": "01055698707",
@@ -80,7 +80,7 @@
         "city": "Karabuk"
     },
     {
-        "customer_id": "C014",
+        "customer_id": "C011",
         "company_name": "None",
         "contact_name": "Na",
         "phone_number": "+966501234567",
@@ -88,11 +88,27 @@
         "city": "Unknown"
     },
     {
-        "customer_id": "C015",
+        "customer_id": "C012",
         "company_name": "Gcl",
         "contact_name": "Hamid",
         "phone_number": "+966509876549",
         "email_address": "gcl@gmail.com",
         "city": "Saudi Arabia"
+    },
+    {
+        "customer_id": "C013",
+        "company_name": "Desert Horizon Trading",
+        "contact_name": "Ahmed Hassan",
+        "phone_number": "+966501234567",
+        "email_address": "ahmed.hassan@example.com",
+        "city": "Congo"
+    },
+    {
+        "customer_id": "C014",
+        "company_name": "Desert Horizon Trading",
+        "contact_name": "Ahmed Hassan",
+        "phone_number": "+966501234567",
+        "email_address": "s.ahmed.hassan@example.com",
+        "city": "Riyadh"
     }
 ]
