@@ -126,5 +126,29 @@
         "phone_number": "+966551234567",
         "email_address": "khalid.mansour@example.com",
         "city": "Riyadh"
+    },
+    {
+        "customer_id": "C017",
+        "company_name": "Tayba",
+        "contact_name": "Tahani",
+        "phone_number": "+966505569876",
+        "email_address": "tahani@gmail.com",
+        "city": "Mekka"
+    },
+    {
+        "customer_id": "C018",
+        "company_name": "Ibm",
+        "contact_name": "George Winthrop",
+        "phone_number": "+966511234567",
+        "email_address": "ibm@gmail.co.uk",
+        "city": "New York"
+    },
+    {
+        "customer_id": "C019",
+        "company_name": "Openai",
+        "contact_name": "James",
+        "phone_number": "+966578943210",
+        "email_address": "open.ai@gmail.com",
+        "city": "Canada"
     }
 ]

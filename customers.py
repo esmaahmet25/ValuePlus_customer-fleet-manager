@@ -73,11 +73,24 @@ def add_customer():
     email_address = input("Enter email address : ").strip()    
     while True:
         if not email_address:
-            print("Enter a valid email address!")
+            print("Email address can't be empty!")
             email_address = input("Enter email address : ").strip()
+        
         elif ("@" not in email_address) or ("." not in email_address):
             print("Enter a valid email address!")
             email_address = input("Enter email address : ").strip()
+        
+        elif email_address.count("@") != 1:
+            print("Enter a valid email address!")
+            email_address = input("Enter email address : ").strip()
+            continue
+
+        local_part, domain = email_address.split("@")
+        if (not local_part) or (domain.startswith(".")) or (domain.endswith(".")) or (".." in domain) or ("," in email_address) or (any(char.isspace() for char in email_address)):
+            print("Enter a valid email address!")
+            email_address = input("Enter email address : ").strip()
+            continue
+
         else:
             break
 
