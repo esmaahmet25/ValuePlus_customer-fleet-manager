@@ -11,9 +11,10 @@ def customer_menu():
             2. View All Customers
             3. Search for a Customer
             4. Return to Main Menu
+            5. Exit
         """)
 
-        user_choice = input("Enter your choice: ")
+        user_choice = input("Enter your choice (1-5): ")
         if user_choice == "1":
             print("\nAdd a Customer selected.")
             add_customer()
@@ -24,12 +25,15 @@ def customer_menu():
             print("\nSearch for a Customer selected.")
             search_customer()
         elif user_choice == "4":
-            return
+            return False
+        elif user_choice == "5":
+            print("\nThank you for using ValuePlus Customer & Fleet Manager!\nGoodbye!")
+            return True
         else:
             print("\nInvalid choice! Please enter a valid choice.")
 
 
-def add_customer():
+def add_customer():   
     customer_numbers = []
     for customer in customers:
         customer_number = int(customer["customer_id"][1:])
@@ -40,20 +44,28 @@ def add_customer():
         maxi = max(customer_numbers) + 1
         customer_id = (f"C{maxi:03d}")
 
-    company_name = input("Enter company name: ").strip()
-    while not company_name:
-        print("Company name shouldn't be empty!")
-        company_name = input("Enter company name: ").strip()
-    company_name = company_name.title()
+    invalid_company = ["none", "n/a", "null", "empty"]
+    while True:
+        company_name = input("Enter company name: ").strip().title()
+        if not company_name:
+            print("Company name shouldn't be empty!")
+        elif company_name.lower() in invalid_company:
+            print("Enter a valid company name!")
+        else:
+            break
 
-    contact_name = input("Enter contact person's name : ").strip()
-    while not contact_name:
-        print("Please enter a contact name!")
-        contact_name = input("Enter contact person's name: ").strip()
-    contact_name = contact_name.title()
+    invalid_name = ["none", "n/a", "null", "Empty"]    
+    while True:
+        contact_name = input("Enter contact person's name : ").strip().title()
+        if not contact_name:
+            print("Please enter a contact name!")
+        elif contact_name.lower() in invalid_name:
+            print("Enter a valid contact name!")
+        else:
+            break
 
     while True:
-        phone_number = input("Enter the phone number: ").strip().replace(" ", "")
+        phone_number = input("Enter the phone number: ").strip().replace(" ", "").replace("-", "")
         is_supported_format = False
         if phone_number.startswith("+966"):
             is_supported_format = True     
@@ -65,37 +77,64 @@ def add_customer():
             is_supported_format = True
 
         if is_supported_format and (len(phone_number[4:]) == 9) and (phone_number[4:].isdigit() and phone_number[4:].startswith("5")):
-            break
+            phone_exists = False
+            for customer in customers:
+                if customer["phone_number"] == phone_number:
+                    phone_exists = True
+                    break
+
+            if phone_exists:
+                print("A customer with this phone number already exists!")
+                continue
+            else:
+                break    
         else:
             print("Unknown/Invalid format!")
-            
+            continue      
 
-    email_address = input("Enter email address : ").strip()    
+    
     while True:
+        email_address = input("Enter email address : ").strip()
         if not email_address:
-            print("Enter a valid email address!")
-            email_address = input("Enter email address : ").strip()
+            print("Email address can't be empty!")
+            continue
+        
         elif ("@" not in email_address) or ("." not in email_address):
             print("Enter a valid email address!")
-            email_address = input("Enter email address : ").strip()
+            continue
+
+        elif email_address.count("@") != 1:
+            print("Enter a valid email address!")
+            continue
+
+        local_part, domain = email_address.split("@")
+        if (not local_part) or (".." in local_part) or (domain.startswith(".")) or (domain.endswith(".")) or (".." in domain) or ("," in email_address) or (any(char.isspace() for char in email_address)):
+            print("Enter a valid email address!")
+            continue
+
+        
+        email_exists = False
+        for customer in customers:
+            if customer["email_address"].lower() == email_address.lower():
+                email_exists = True
+                break
+
+        if email_exists:
+            print("A customer with this email already exists!")
+            continue
+
+        else:
+            break 
+
+    invalid_city = ["none", "n/a", "null", "empty"]    
+    while True:
+        city = input("Enter city : ").strip().title()
+        if not city:
+            print("Contact name should not be empty!")
+        elif city.lower() in invalid_city:
+            print("Enter a valid city name!")
         else:
             break
-
-    email_exists = False
-    for customer in customers:
-        if customer["email_address"].lower() == email_address.lower():
-            email_exists = True
-            break
-    if email_exists:
-        print("A customer with this email already exists!")
-        return
-   
-    city = input("Enter city : ").strip()
-    while not city:
-        print("Please enter City name!")
-        city = input("Enter city: ").strip()
-    city = city.title()
-
 
     customer_info = {
         "customer_id": customer_id,
@@ -123,13 +162,13 @@ def add_customer():
 
     print(f"\nTotal customers: {len(customers)}")
 
-    
+        
 def view_customers():
     if not customers:
         print("No customers found!")
         return
     print("""
-           ========== Customer List ==========
+           ========== Customer Details ==========
     """)
     for customer in customers:
         print(f"""
@@ -138,8 +177,8 @@ def view_customers():
             City: {customer["city"]}
             -----------------------------------
     """)
-    
 
+    
 def search_customer():
     if not customers:
         print("No customers are registered!")

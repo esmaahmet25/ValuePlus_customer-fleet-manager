@@ -16,8 +16,7 @@ def display_menu():
 def handle_user_choice(user_choice):
         if user_choice == "1":
             print("\nYou selected Customer Management.\n")
-            customer_menu()
-            return False
+            return customer_menu()
         elif user_choice == "2":
             print("\nYou selected Fleet Management.\n")
             return False

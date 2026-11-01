@@ -126,5 +126,109 @@
         "phone_number": "+966551234567",
         "email_address": "khalid.mansour@example.com",
         "city": "Riyadh"
+    },
+    {
+        "customer_id": "C017",
+        "company_name": "Tayba",
+        "contact_name": "Tahani",
+        "phone_number": "+966505569876",
+        "email_address": "tahani@gmail.com",
+        "city": "Mecca"
+    },
+    {
+        "customer_id": "C018",
+        "company_name": "IBM",
+        "contact_name": "George Winthrop",
+        "phone_number": "+966511234567",
+        "email_address": "george.winthrop@example.com",
+        "city": "Riyadh"
+    },
+    {
+        "customer_id": "C019",
+        "company_name": "OpenAI",
+        "contact_name": "James",
+        "phone_number": "+966578943210",
+        "email_address": "james.openai@example.com",
+        "city": "Jeddah"
+    },
+    {
+        "customer_id": "C020",
+        "company_name": "Al Waha Car Rentals",
+        "contact_name": "Ahmed Saleh",
+        "phone_number": "+966501234987",
+        "email_address": "ahmed.saleh@example.com",
+        "city": "Riyadh"
+    },
+    {
+        "customer_id": "C021",
+        "company_name": "Golden Route Logistics",
+        "contact_name": "Mona Ibrahim",
+        "phone_number": "+966501112223",
+        "email_address": "mona.ibrahim@example.com",
+        "city": "Dammam"
+    },
+    {
+        "customer_id": "C022",
+        "company_name": "Blue Horizon Trading",
+        "contact_name": "Khalid Omar",
+        "phone_number": "+966502223334",
+        "email_address": "khalid.omar@example.com",
+        "city": "Jeddah"
+    },
+    {
+        "customer_id": "C023",
+        "company_name": "Palm Gate Services",
+        "contact_name": "Noura Hassan",
+        "phone_number": "+966503334445",
+        "email_address": "noura.hassan@example.com",
+        "city": "Madinah"
+    },
+    {
+        "customer_id": "C024",
+        "company_name": "Eastern Star Transport",
+        "contact_name": "Yousef Ali",
+        "phone_number": "+966505558765",
+        "email_address": "yousef.ali@example.com",
+        "city": "Khobar"
+    },
+    {
+        "customer_id": "C025",
+        "company_name": "Summit Business Solutions",
+        "contact_name": "Ahmed Rahman",
+        "phone_number": "+966506784325",
+        "email_address": "ahmed.rahman@example.com",
+        "city": "Abha"
+    },
+    {
+        "customer_id": "C026",
+        "company_name": "Cedar Fleet Services",
+        "contact_name": "Eghbal Khan",
+        "phone_number": "+966527697644",
+        "email_address": "eghbal.khan@example.com",
+        "city": "Tabuk"
+    },
+    {
+        "customer_id": "C027",
+        "company_name": "Al Safa Mobility",
+        "contact_name": "Ahmad Hassan",
+        "phone_number": "+966549602356",
+        "email_address": "ahmad.hassan@example.com",
+        "city": "Taif"
+    },
+    {
+        "customer_id": "C028",
+        "company_name": "Desert Pearl Rentals",
+        "contact_name": "Omar Nasser",
+        "phone_number": "+966512389764",
+        "email_address": "omar.nasser@example.com",
+        "city": "Yanbu"
+    },
+    {
+        "customer_id": "C029",
+        "company_name": "Al Noor",
+        "contact_name": "Sara Ali",
+        "phone_number": "+966505678912",
+        "email_address": "sara.ali@example.com",
+        "city": "Jeddah"
     }
 ]
