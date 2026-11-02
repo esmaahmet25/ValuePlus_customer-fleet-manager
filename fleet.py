@@ -151,3 +151,27 @@ def view_vehicles():
             Availability: {vehicle["availability"]}
             -----------------------------------
     """)
+
+
+def search_vehicle():
+    if not vehicles:
+        print("No vehicles are registered!")
+        return
+    vehicle_id = input("Enter the vehicle ID: ").strip().upper()
+    for vehicle in vehicles:
+        if vehicle_id == vehicle["vehicle_id"]:
+            print("""
+                ========== Vehicle List ==========
+            """)
+            print(f"""
+                Vehicle ID: {vehicle["vehicle_id"]}
+                Make: {vehicle["make"]}
+                Model: {vehicle["model"]}
+                Year: {vehicle["year"]}
+                Registration number: {vehicle["registration_number"]}
+                Monthly lease price: {vehicle["monthly_lease_price"]:.2f} SAR
+                Availability: {vehicle["availability"]}
+                -----------------------------------
+        """)
+            return
+    print("Vehicle not found!")
