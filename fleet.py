@@ -138,12 +138,10 @@ def view_vehicles():
         print("No vehicles found!")
         return
     
-    availability = True
-    print(f"Availability: {'Available' if availability else 'Unavailable'}") 
     print("""
         ========== Vehicles Details ==========
         """)
-    for vehicle in vehicles:
+    for vehicle in vehicles: 
         print(f"""
             Vehicle ID: {vehicle["vehicle_id"]}
             Make: {vehicle["make"]}
@@ -151,10 +149,10 @@ def view_vehicles():
             Year: {vehicle["year"]}
             Registration number: {vehicle["registration_number"]}
             Monthly lease price: {vehicle["monthly_lease_price"]:.2f} SAR
-            Availability: {vehicle["availability"]}
+            Availability: {'Available' if vehicle["availability"] else 'Unavailable'}
             -----------------------------------
     """)
-
+        
 
 def search_vehicle():
     if not vehicles:
