@@ -14,3 +14,19 @@ def load_customers():
 def save_customers(customers):
     with open("data/customers.json", "w") as file:
         json.dump(customers, file, indent=4)
+
+
+
+def load_vehicles():
+    try:
+        with open("data/vehicles.json", "r") as file:
+            file_data = json.load(file)
+            return file_data
+    except FileNotFoundError:
+        return []
+
+
+
+def save_vehicles(vehicles):
+    with open("data/vehicles.json", "w") as file:
+        json.dump(vehicles, file, indent=4)

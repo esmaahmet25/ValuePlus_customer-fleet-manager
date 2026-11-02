@@ -1,4 +1,5 @@
-vehicles = []
+from storage import load_vehicles, save_vehicles
+vehicles = load_vehicles()
 
 def fleet_menu():
     while True:
@@ -114,6 +115,8 @@ def add_vehicle():
 }
     vehicles.append(vehicle_info)
     
+    save_vehicles(vehicles)
+
     print(f"""
         ========== Vehicles Details ==========
         Vehicle ID: {vehicle_info["vehicle_id"]}
