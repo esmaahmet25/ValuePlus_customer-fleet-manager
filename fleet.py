@@ -90,12 +90,12 @@ def add_vehicle():
 
     while True:
         try:
-            monthly_lease_price = float(input("Enter vehicle monthly_lease_price: ").strip())
+            monthly_lease_price = float(input("Enter monthly lease price (SAR): ").strip())
         except ValueError:
             print("The monthly lease price should be a number!")
             continue
         
-        if not monthly_lease_price > 0:
+        if monthly_lease_price <= 0:
             print("Monthly lease price must be greater than zero.")
         else:
             break
@@ -125,7 +125,7 @@ def add_vehicle():
         Year: {vehicle_info["year"]}
         Registration number: {vehicle_info["registration_number"]}
         Monthly lease price: {vehicle_info["monthly_lease_price"]:.2f} SAR
-        Availability: {vehicle_info["availability"]}
+        Availability: {'Available' if vehicle["availability"] else 'Unavailable'}
         ======================================
     """
     )
@@ -171,7 +171,7 @@ def search_vehicle():
                 Year: {vehicle["year"]}
                 Registration number: {vehicle["registration_number"]}
                 Monthly lease price: {vehicle["monthly_lease_price"]:.2f} SAR
-                Availability: {vehicle["availability"]}
+                Availability: {'Available' if vehicle["availability"] else 'Unavailable'}
                 -----------------------------------
         """)
             return

@@ -7,5 +7,23 @@
         "registration_number": "ABC 123",
         "monthly_lease_price": 2500.0,
         "availability": true
+    },
+    {
+        "vehicle_id": "V002",
+        "make": "Toyota",
+        "model": "Corolla",
+        "year": 2025,
+        "registration_number": "123 ABC",
+        "monthly_lease_price": 2500.0,
+        "availability": true
+    },
+    {
+        "vehicle_id": "V003",
+        "make": "Hyundai",
+        "model": "Elantra",
+        "year": 2024,
+        "registration_number": "XYZ 789",
+        "monthly_lease_price": 3500.0,
+        "availability": true
     }
 ]
