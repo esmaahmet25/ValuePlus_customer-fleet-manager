@@ -1,4 +1,5 @@
 from customers import customer_menu
+from fleet import fleet_menu
 
 def display_menu():
     print("""
@@ -19,7 +20,7 @@ def handle_user_choice(user_choice):
             return customer_menu()
         elif user_choice == "2":
             print("\nYou selected Fleet Management.\n")
-            return False
+            return fleet_menu()
         elif user_choice == "3":
             print("\nYou selected Quotations.\n")
             return False
