@@ -1,0 +1,30 @@
+
+def quotation_menu():
+    while True:
+        print("""
+            ValuePlus — Quotation Management
+
+            1. Create a Quotation
+            2. View All Quotations
+            3. Search for a Quotation
+            4. Return to Main Menu
+            5. Exit
+        """)
+
+        user_choice = input("Enter your choice (1-5): ")
+        if user_choice == "1":
+            print("\nAdd a Quotation selected.")
+        elif user_choice == "2":
+            print("\nView All Quotations selected.")
+        elif user_choice == "3":
+            print("\nSearch for a Quotation selected.")
+        elif user_choice == "4":
+            return False
+        elif user_choice == "5":
+            print("\nThank you for using ValuePlus Customer & Fleet Manager!\nGoodbye!")
+            return True
+        else:
+            print("\nInvalid choice! Please enter a valid choice.")
+
+
+quotation_menu()
