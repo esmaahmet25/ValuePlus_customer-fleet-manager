@@ -16,13 +16,13 @@ def fleet_menu():
         user_choice = input("Enter your choice (1-5): ")
         if user_choice == "1":
             print("\nAdd a Vehicle selected.")
-            #add_vehicle()
+            add_vehicle()
         elif user_choice == "2":
             print("\nView All Vehicles selected.")
-            #view_vehicles()
+            view_vehicles()
         elif user_choice == "3":
             print("\nSearch for a Vehicle selected.")
-            #search_vehicle()
+            search_vehicle()
         elif user_choice == "4":
             return False
         elif user_choice == "5":
@@ -137,6 +137,9 @@ def view_vehicles():
     if not vehicles:
         print("No vehicles found!")
         return
+    
+    availability = True
+    print(f"Availability: {'Available' if availability else 'Unavailable'}") 
     print("""
         ========== Vehicles Details ==========
         """)

@@ -1,0 +1,11 @@
+[
+    {
+        "vehicle_id": "V001",
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2025,
+        "registration_number": "ABC 123",
+        "monthly_lease_price": 2500.0,
+        "availability": true
+    }
+]
