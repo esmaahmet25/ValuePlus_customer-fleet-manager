@@ -2,7 +2,7 @@
 def quotation_menu():
     while True:
         print("""
-            ValuePlus — Quotation Management
+            ValuePlus — Quotations Management
 
             1. Create a Quotation
             2. View All Quotations
@@ -25,6 +25,3 @@ def quotation_menu():
             return True
         else:
             print("\nInvalid choice! Please enter a valid choice.")
-
-
-quotation_menu()

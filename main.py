@@ -1,5 +1,7 @@
 from customers import customer_menu
 from fleet import fleet_menu
+from quotations import quotation_menu
+
 
 def display_menu():
     print("""
@@ -15,21 +17,21 @@ def display_menu():
 )
 
 def handle_user_choice(user_choice):
-        if user_choice == "1":
-            print("\nYou selected Customer Management.\n")
-            return customer_menu()
-        elif user_choice == "2":
-            print("\nYou selected Fleet Management.\n")
-            return fleet_menu()
-        elif user_choice == "3":
-            print("\nYou selected Quotations.\n")
-            return False
-        elif user_choice == "4":
-            print("\nThank you for using ValuePlus Customer & Fleet Manager!\nGoodbye!")
-            return True
-        else:
-            print("\nInvalid choice! Enter a valid number (1-4)")
-            return False
+    if user_choice == "1":
+        print("\nYou selected Customer Management.\n")
+        return customer_menu()
+    elif user_choice == "2":
+        print("\nYou selected Fleet Management.\n")
+        return fleet_menu()
+    elif user_choice == "3":
+        print("\nYou selected Quotations.\n")
+        return quotation_menu()
+    elif user_choice == "4":
+        print("\nThank you for using ValuePlus Customer & Fleet Manager!\nGoodbye!")
+        return True
+    else:
+        print("\nInvalid choice! Enter a valid number (1-4)")
+        return False
 
 
 def main(): 
@@ -39,5 +41,6 @@ def main():
         result = handle_user_choice(user_choice)
         if result:
             break
-if __name__== "__main__":
+
+if __name__ == "__main__":
     main()
