@@ -1,3 +1,4 @@
+from customers import customers
 
 def quotation_menu():
     while True:
