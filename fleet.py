@@ -1,3 +1,5 @@
+vehicles = []
+
 def fleet_menu():
     while True:
         print("""
@@ -27,3 +29,102 @@ def fleet_menu():
             return True
         else:
             print("\nInvalid choice! Please enter a valid choice.")
+
+
+
+def add_vehicle():   
+    vehicle_numbers = []
+    for vehicle in vehicles:
+        vehicle_number = int(vehicle["vehicle_id"][1:])
+        vehicle_numbers.append(vehicle_number)
+    if not vehicle_numbers:
+        vehicle_id = "V001"
+    else:
+        maxi = max(vehicle_numbers) + 1
+        vehicle_id = (f"V{maxi:03d}")
+
+    while True:
+        make = input("Enter vehicle make: ").strip().title()
+        if not make:
+            print("Make section can't be empty!")
+        else:
+            break
+
+    while True:    
+        model = input("Enter vehicle model: ").strip().title()
+        if not model:
+            print("Model section can't be empty!")
+        else:
+            break
+
+    while True:
+        try:
+            year = int(input("Enter manufacturing year: "))
+        except ValueError:
+            print("Manufacturing year should be a number!")
+            continue
+
+        if not (2000 <= year <= 2026):
+            print("Manufacturing year must be between 2000 and 2026!")
+        else:
+            break
+
+    while True:
+        registration_number = input("Enter registration number: ").strip().upper()
+        if not registration_number:
+            print("Registration number can't be empty!")
+            continue
+
+        registration_number_exists = False
+        for vehicle in vehicles:
+            if vehicle["registration_number"] == registration_number:
+                registration_number_exists = True
+                break
+        if registration_number_exists:
+            print("A vehicle with this registration number already exists!")
+            continue
+
+        else:
+            break
+
+    while True:
+        try:
+            monthly_lease_price = float(input("Enter vehicle monthly_lease_price: ").strip())
+        except ValueError:
+            print("The monthly lease price should be a number!")
+            continue
+        
+        if not monthly_lease_price > 0:
+            print("Monthly lease price must be greater than zero.")
+        else:
+            break
+
+    availability = True
+    print(f"Availability: {'Available' if availability else 'Unavailable'}") 
+
+    
+    vehicle_info = {
+        "vehicle_id": vehicle_id,
+        "make": make,
+        "model": model,
+        "year": year,
+        "registration_number": registration_number,
+        "monthly_lease_price": monthly_lease_price,
+        "availability": availability
+}
+    vehicles.append(vehicle_info)
+    
+    print(f"""
+        ========== Vehicles Details ==========
+        Vehicle ID: {vehicle_info["vehicle_id"]}
+        Make: {vehicle_info["make"]}
+        Model: {vehicle_info["model"]}
+        Year: {vehicle_info["year"]}
+        Registration number: {vehicle_info["registration_number"]}
+        Monthly lease price: {vehicle_info["monthly_lease_price"]:.2f} SAR
+        Availability: {vehicle_info["availability"]}
+        ======================================
+    """
+    )
+
+    print(f"\nTotal vehicles: {len(vehicles)}")
