@@ -131,3 +131,23 @@ def add_vehicle():
     )
 
     print(f"\nTotal vehicles: {len(vehicles)}")
+
+
+def view_vehicles():
+    if not vehicles:
+        print("No vehicles found!")
+        return
+    print("""
+        ========== Vehicles Details ==========
+        """)
+    for vehicle in vehicles:
+        print(f"""
+            Vehicle ID: {vehicle["vehicle_id"]}
+            Make: {vehicle["make"]}
+            Model: {vehicle["model"]}
+            Year: {vehicle["year"]}
+            Registration number: {vehicle["registration_number"]}
+            Monthly lease price: {vehicle["monthly_lease_price"]:.2f} SAR
+            Availability: {vehicle["availability"]}
+            -----------------------------------
+    """)
