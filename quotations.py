@@ -65,3 +65,16 @@ def get_quantity():
             print("Quantity can't be zero or negative!")
         else:
             return quantity
+
+
+def get_contract_duration():
+    while True:
+        try:
+            duration = int(input("Enter contract duration (months): "))
+        except ValueError:
+            print("Please enter a valid whole number!")
+            continue
+        if duration <= 0:
+            print("Duration can't be zero or negative!")
+        else:
+            return duration
