@@ -36,7 +36,11 @@ def quotation_menu():
 
 
 def select_customer():
-    while True:  
+    if not customers:
+        print("No customers are registered!")
+        return
+    
+    while True:
         cust_id = input("Enter Customer ID: ").strip().upper()
         for customer in customers:
             if cust_id == customer["customer_id"]:
@@ -46,6 +50,10 @@ def select_customer():
 
 
 def select_vehicle():
+    if not vehicles:
+        print("No vehicles are registered!")
+        return 
+    
     while True:
         veh_id = input("Enter Vehicle ID: ").strip().upper()
         for vehicle in vehicles:
@@ -109,7 +117,11 @@ def generate_quotation_id():
 def create_quotation():
     quotation_id = generate_quotation_id()
     selected_customer = select_customer()
+    if selected_customer is None:
+        return
     selected_vehicle = select_vehicle()
+    if selected_vehicle is None:
+        return
     vehicle_quantity = get_quantity()
     contract_duration = get_contract_duration()
 
