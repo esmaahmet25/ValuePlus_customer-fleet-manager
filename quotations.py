@@ -23,7 +23,7 @@ def quotation_menu():
         elif user_choice == "2":
             view_all_quotations()
         elif user_choice == "3":
-            print("\nSearch for a Quotation selected.")
+            search_quotation()
         elif user_choice == "4":
             return False
         elif user_choice == "5":
@@ -36,7 +36,7 @@ def quotation_menu():
 
 
 def select_customer():
-    while True:
+    while True:  
         cust_id = input("Enter Customer ID: ").strip().upper()
         for customer in customers:
             if cust_id == customer["customer_id"]:
@@ -139,6 +139,7 @@ def create_quotation():
         Vehicle ID: {quotation_info["vehicle_id"]}
         Quantity: {quotation_info["quantity"]}
         Contract duration: {quotation_info["contract_duration"]}
+        Monthly price: {quotation_info["monthly_price"]:.2f} SAR
         Monthly total: {quotation_info["monthly_total"]:.2f} SAR
         Contract total: {quotation_info["contract_total"]:.2f} SAR
         ======================================
@@ -165,3 +166,29 @@ def view_all_quotations():
             Contract total: {quotation["contract_total"]:.2f} SAR
             -----------------------------------
     """)
+
+
+
+def search_quotation():
+    if not quotations:
+        print("No quotations are registered!")
+        return
+    quotation_id = input("Enter the quotation ID: ").strip().upper()
+    for quotation in quotations:
+        if quotation_id == quotation["quotation_id"]:
+            print("""
+                ========== Quotation Details ==========
+            """)
+            print(f"""
+                Quotation ID: {quotation["quotation_id"]}
+                Customer ID: {quotation["customer_id"]}
+                Vehicle ID: {quotation["vehicle_id"]}
+                Quantity: {quotation["quantity"]}
+                Monthly price: {quotation["monthly_price"]:.2f} SAR
+                Contract duration: {quotation["contract_duration"]}
+                Monthly total: {quotation["monthly_total"]:.2f} SAR
+                Contract total: {quotation["contract_total"]:.2f} SAR
+                -----------------------------------
+        """)
+            return
+    print("Quotation not found!")
