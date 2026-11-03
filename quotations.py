@@ -19,7 +19,7 @@ def quotation_menu():
 
         user_choice = input("Enter your choice (1-5): ")
         if user_choice == "1":
-            print("\nAdd a Quotation selected.")
+            create_quotation()
         elif user_choice == "2":
             print("\nView All Quotations selected.")
         elif user_choice == "3":
@@ -31,6 +31,8 @@ def quotation_menu():
             return True
         else:
             print("\nInvalid choice! Please enter a valid choice.")
+
+
 
 
 def select_customer():
@@ -101,3 +103,45 @@ def generate_quotation_id():
         maxi_number = max(quotation_numbers) + 1
         quotation_id = (f"Q{maxi_number:03d}")
     return quotation_id
+
+
+
+def create_quotation():
+    quotation_id = generate_quotation_id()
+    selected_customer = select_customer()
+    selected_vehicle = select_vehicle()
+    vehicle_quantity = get_quantity()
+    contract_duration = get_contract_duration()
+
+    price = selected_vehicle['monthly_lease_price']
+    monthly_total, contract_total = calculate_totals(
+        price, vehicle_quantity, contract_duration
+        )
+
+    quotation_info = {
+        "quotation_id":	quotation_id,
+        "customer_id": selected_customer["customer_id"],
+        "vehicle_id": selected_vehicle["vehicle_id"],
+        "quantity":	vehicle_quantity,
+        "monthly_price": price,
+        "contract_duration": contract_duration,
+        "monthly_total": monthly_total,
+        "contract_total": contract_total
+    }
+
+    quotations.append(quotation_info)
+    save_quotations(quotations)
+
+    print(f"""
+        ========== Quotation Details ==========
+        Quotation ID: {quotation_info["quotation_id"]}
+        Customer ID: {quotation_info["customer_id"]}
+        Vehicle ID: {quotation_info["vehicle_id"]}
+        Quantity: {quotation_info["quantity"]}
+        Contract duration: {quotation_info["contract_duration"]}
+        Monthly total: {quotation_info["monthly_total"]:.2f} SAR
+        Contract total: {quotation_info["contract_total"]:.2f} SAR
+        ======================================
+    """)    
+
+    
