@@ -52,3 +52,16 @@ def select_vehicle():
                     break
         else:
             print("Vehicle not found!")
+
+
+def get_quantity():
+    while True:
+        try:
+            quantity = int(input("Enter the vehicle quantity: "))
+        except ValueError:
+            print("Please enter a valid whole number!")
+            continue
+        if quantity <= 0:
+            print("Quantity can't be zero or negative!")
+        else:
+            return quantity
