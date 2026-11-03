@@ -38,5 +38,15 @@
         "contract_duration": 12,
         "monthly_total": 2500.0,
         "contract_total": 30000.0
+    },
+    {
+        "quotation_id": "Q001",
+        "customer_id": "C002",
+        "vehicle_id": "V001",
+        "quantity": 3,
+        "monthly_price": 2500.0,
+        "contract_duration": 12,
+        "monthly_total": 7500.0,
+        "contract_total": 90000.0
     }
 ]
