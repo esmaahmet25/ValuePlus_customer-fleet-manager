@@ -1,4 +1,6 @@
 from customers import customers
+from fleet import vehicles
+
 
 def quotation_menu():
     while True:
@@ -37,3 +39,16 @@ def select_customer():
         else:
             print("This ID doesn't exist!")
 
+
+def select_vehicle():
+    while True:
+        veh_id = input("Enter Vehicle ID: ").strip().upper()
+        for vehicle in vehicles:
+            if (veh_id == vehicle["vehicle_id"]):
+                if vehicle['availability']:
+                    return vehicle
+                else:
+                    print("This vehicle is currently unavailable!")
+                    break
+        else:
+            print("Vehicle not found!")

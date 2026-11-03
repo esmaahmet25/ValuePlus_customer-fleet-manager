@@ -24,6 +24,6 @@
         "year": 2024,
         "registration_number": "XYZ 789",
         "monthly_lease_price": 3500.0,
-        "availability": true
+        "availability": false
     }
 ]
