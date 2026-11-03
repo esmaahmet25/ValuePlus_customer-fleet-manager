@@ -29,14 +29,11 @@ def quotation_menu():
 
 
 def select_customer():
-    #Ask the user to enter a Customer ID./Remove unnecessary spaces using .strip()./Convert the ID to uppercase using .upper().
-    cust_id = input("Enter Customer ID: ").strip().upper()
-    
-    #Search through the customers list.
-    for customer in customers:
-        #Return the matching customer dictionary if found.
-        if cust_id == customer["customer_id"]:
-            return customer
-    else:
-        #Display an error message if the ID doesn't exist.
-        print("This ID doesn't exist!")
+    while True:
+        cust_id = input("Enter Customer ID: ").strip().upper()
+        for customer in customers:
+            if cust_id == customer["customer_id"]:
+                return customer
+        else:
+            print("This ID doesn't exist!")
+
