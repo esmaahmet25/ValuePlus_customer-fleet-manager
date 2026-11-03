@@ -78,3 +78,10 @@ def get_contract_duration():
             print("Duration can't be zero or negative!")
         else:
             return duration
+
+
+def calculate_totals(monthly_price, quantity, duration):
+    monthly_total = monthly_price  * quantity
+    contract_total = monthly_total * duration
+    return monthly_total, contract_total
+
