@@ -21,7 +21,7 @@ def quotation_menu():
         if user_choice == "1":
             create_quotation()
         elif user_choice == "2":
-            print("\nView All Quotations selected.")
+            view_all_quotations()
         elif user_choice == "3":
             print("\nSearch for a Quotation selected.")
         elif user_choice == "4":
@@ -144,4 +144,24 @@ def create_quotation():
         ======================================
     """)    
 
+
+def view_all_quotations():
+    if not quotations:
+        print("No quotations found!")
+        return
     
+    print("""
+        ========== Quotations Details ==========
+        """)
+    for quotation in quotations: 
+        print(f"""
+            Quotation ID: {quotation["quotation_id"]}
+            Customer ID: {quotation["customer_id"]}
+            Vehicle ID: {quotation["vehicle_id"]}
+            Quantity: {quotation["quantity"]}
+            Monthly price: {quotation["monthly_price"]:.2f} SAR
+            Contract duration: {quotation["contract_duration"]}
+            Monthly total: {quotation["monthly_total"]:.2f} SAR
+            Contract total: {quotation["contract_total"]:.2f} SAR
+            -----------------------------------
+    """)
