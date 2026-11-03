@@ -1,5 +1,8 @@
 from customers import customers
 from fleet import vehicles
+from storage import load_quotations, save_quotations
+
+quotations = load_quotations()
 
 
 def quotation_menu():
@@ -85,3 +88,16 @@ def calculate_totals(monthly_price, quantity, duration):
     contract_total = monthly_total * duration
     return monthly_total, contract_total
 
+
+
+def generate_quotation_id():   
+    quotation_numbers = []
+    for quotation in quotations:
+        quotation_number = int(quotation["quotation_id"][1:])
+        quotation_numbers.append(quotation_number)
+    if not quotation_numbers:
+        quotation_id = "Q001"
+    else:
+        maxi_number = max(quotation_numbers) + 1
+        quotation_id = (f"Q{maxi_number:03d}")
+    return quotation_id

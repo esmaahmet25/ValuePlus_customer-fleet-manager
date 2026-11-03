@@ -30,3 +30,19 @@ def load_vehicles():
 def save_vehicles(vehicles):
     with open("data/vehicles.json", "w") as file:
         json.dump(vehicles, file, indent=4)
+
+
+
+
+def load_quotations():
+    try:
+        with open("data/quotations.json", "r") as file:
+            file_data = json.load(file)
+            return file_data
+    except FileNotFoundError:
+        return []
+
+
+def save_quotations(quotations):
+    with open("data/quotations.json", "w") as file:
+        json.dump(quotations, file, indent=4)
