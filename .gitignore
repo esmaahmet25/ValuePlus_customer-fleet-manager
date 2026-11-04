@@ -16,7 +16,3 @@ env/
 # Windows
 Thumbs.db
 
-
-test_empty_data.py
-test_quotation_id.py
-test_storage.py
