@@ -54,7 +54,7 @@ def add_customer():
         else:
             break
 
-    invalid_name = ["none", "n/a", "null", "Empty"]    
+    invalid_name = ["none", "n/a", "null", "empty"]    
     while True:
         contact_name = input("Enter contact person's name : ").strip().title()
         if not contact_name:
@@ -130,7 +130,7 @@ def add_customer():
     while True:
         city = input("Enter city : ").strip().title()
         if not city:
-            print("Contact name should not be empty!")
+            print("City should not be empty!")
         elif city.lower() in invalid_city:
             print("Enter a valid city name!")
         else:

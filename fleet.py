@@ -112,7 +112,7 @@ def add_vehicle():
         "registration_number": registration_number,
         "monthly_lease_price": monthly_lease_price,
         "availability": availability
-}
+    }
     vehicles.append(vehicle_info)
     
     save_vehicles(vehicles)
@@ -125,7 +125,7 @@ def add_vehicle():
         Year: {vehicle_info["year"]}
         Registration number: {vehicle_info["registration_number"]}
         Monthly lease price: {vehicle_info["monthly_lease_price"]:.2f} SAR
-        Availability: {'Available' if vehicle["availability"] else 'Unavailable'}
+        Availability: {'Available' if vehicle_info["availability"] else 'Unavailable'}
         ======================================
     """
     )

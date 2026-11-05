@@ -13,8 +13,7 @@ def display_menu():
     2. Fleet Management
     3. Quotations
     4. Exit
-"""
-)
+""")
 
 def handle_user_choice(user_choice):
     if user_choice == "1":

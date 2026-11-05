@@ -6,7 +6,6 @@ def load_customers():
             file_data = json.load(file)
             return file_data
     except FileNotFoundError:
-            print("File not found!")
             return []
 
 
