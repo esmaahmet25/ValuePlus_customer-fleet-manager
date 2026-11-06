@@ -32,6 +32,20 @@ The first version includes the following implemented features:
 
 - Unique IDs: Generate sequential IDs for customers, vehicles, and quotations.
 
+## Application Screenshots
+
+### Main Menu
+![Main Menu](screenshots/main-menu.png)
+
+### Customer Management
+![Customer Management](screenshots/customer-menu.png)
+
+### Fleet Management
+![Fleet Management](screenshots/fleet-menu.png)
+
+### Quotation Management
+![Quotation Management](screenshots/quotation-menu.png)
+
 
 ## Technologies
 
