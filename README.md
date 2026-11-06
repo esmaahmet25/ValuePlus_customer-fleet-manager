@@ -14,17 +14,24 @@ This project is also part of my journey in developing practical Python programmi
 
 ## Features — Version 1
 
-The first version is planned to include:
+The first version includes the following implemented features:
 
-- **Customer Management:** Add, view, and search customer records.
-- **Fleet Management:** Add, view, and search vehicle records.
-- **Vehicle Availability:** Filter vehicles by city, category, and availability status.
-- **Quotation Management:** Create and view leasing quotations linked to customers and vehicles.
-- **Cost Calculation:** Calculate estimated monthly and total contract costs.
-- **Data Storage:** Save and load records using JSON files.
-- **Input Validation:** Handle invalid entries and missing records gracefully.
+- Customer Management: Add, view, and search customer records.
 
-Features will be marked as completed as they are implemented and tested.
+- Fleet Management: Add, view, and search vehicle records.
+
+- Vehicle Availability: Track whether each vehicle is available or unavailable.
+
+- Quotation Management: Create, view, and search quotations linked to existing customers and vehicles.
+
+- Cost Calculation: Calculate estimated monthly costs and total contract values based on vehicle price, quantity, and contract duration.
+
+- Data Storage: Save and load customer, vehicle, and quotation records using JSON files.
+
+- Input Validation: Handle invalid inputs, duplicate customer information, unavailable vehicles, and missing records.
+
+- Unique IDs: Generate sequential IDs for customers, vehicles, and quotations.
+
 
 ## Technologies
 
@@ -36,43 +43,55 @@ Features will be marked as completed as they are implemented and tested.
 ## Project Structure
 
 ```text
-valueplus-customer-fleet-manager/
-├── main.py
-├── customers.py
-├── fleet.py
-├── quotations.py
-├── storage.py
+ValuePlus_customer-fleet-manager/
+
 ├── data/
 │   ├── customers.json
 │   ├── vehicles.json
 │   └── quotations.json
+├── tests/
+│   ├── test_empty_data.py
+│   ├── test_quotation_id.py
+│   └── test_storage.py
+├── customers.py
+├── fleet.py
+├── quotations.py
+├── storage.py
+├── main.py
 ├── README.md
+├── LICENSE
 └── .gitignore
 ```
 
-The `data/` directory and JSON files will be created as the storage functionality is implemented.
+The `data/` directory contains JSON files used to store customer, vehicle, and quotation records locally. If a data file is missing, the application loads an empty list and creates the file when records are saved.
 
 - `main.py` — runs the application and displays the main menu.
 - `customers.py` — handles customer-related operations.
-- `fleet.py` — handles vehicle records and availability searches.
+- `fleet.py` — handles vehicle records, availability, and vehicle searches by ID.
 - `quotations.py` — creates quotations and calculates estimated costs.
 - `storage.py` — manages loading and saving JSON data.
 - `data/` — stores customer, vehicle, and quotation records locally.
 
+
 ## How to Run
 
-**Prerequisites:** Python 3 installed on your computer.
+### Prerequisites
 
-1. Clone this repository:
+- Python 3.
+- Git.
+
+### Installation
+
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/esmaahmet25/valueplus-customer-fleet-manager.git
+   git clone https://github.com/esmaahmet25/ValuePlus_customer-fleet-manager.git
    ```
 
-2. Open the project directory:
+2. Navigate to the project directory:
 
    ```bash
-   cd valueplus-customer-fleet-manager
+   cd ValuePlus_customer-fleet-manager
    ```
 
 3. Run the application:
@@ -81,16 +100,19 @@ The `data/` directory and JSON files will be created as the storage functionalit
    python main.py
    ```
 
+No external Python packages are required for the current version.
+
+
 ## Example Workflow
 
-A typical workflow is intended to look like this:
+1. Register a customer.
+2. Add vehicles to the fleet.
+3. View or search for registered customers and vehicles.
+4. Select an existing customer and an available vehicle.
+5. Enter the vehicle quantity and contract duration.
+6. Generate a quotation with calculated monthly and contract totals.
+7. Save the quotation and other records locally using JSON files.
 
-1. Add a customer who needs leased vehicles.
-2. Add vehicle records to the fleet.
-3. Search for vehicles matching the customer's requirements.
-4. Create a quotation using the selected customer and vehicle.
-5. Calculate the estimated monthly cost and total contract value.
-6. Save the records for future use.
 
 ## Learning Objectives
 
@@ -118,9 +140,13 @@ These are future ideas, not features currently included in Version 1.
 
 ## Project Status
 
-**Version 1 — In Development**
+**Version 1 — Completed**
 
-The project is being built incrementally, starting with core customer, fleet, and quotation functionality before adding persistent JSON storage.
+The first version includes customer management, fleet management, quotation management, input validation, and JSON-based data persistence.
+
+The application has undergone manual functional testing and code review.
+
+Future versions will introduce object-oriented programming, database integration, APIs, and AI-powered automation.
 
 ## Disclaimer
 
